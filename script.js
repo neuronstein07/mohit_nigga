@@ -1,4 +1,16 @@
 
+// date based blur
+  const expiryDateTime = new Date("2025-06-15T17:30:00"); // Format: YYYY-MM-DDTHH:MM:SS (24-hour)
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const now = new Date();
+
+    if (now >= expiryDateTime) {
+      document.getElementById("expired-overlay").style.display = "flex";
+      document.body.classList.add("locked-expired");
+    }
+  });
+
 
 
 
